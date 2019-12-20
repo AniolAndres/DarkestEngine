@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "Application.h"
 
 #include "ModuleInput.h"
@@ -30,6 +29,29 @@ bool Application::Init()
 	}
 
 	return result;
+}
+
+UpdateState Application::Update()
+{
+	//Separating the update between three methods helps us diferentiate when each one is 
+	//called regardless of the order the modules are in the vector
+
+	for (std::vector<Module*>::iterator it = modules.begin(); it != modules.end(); ++it)
+	{
+		(*it)->PreUpdate();
+	}
+
+	for (std::vector<Module*>::iterator it = modules.begin(); it != modules.end(); ++it)
+	{
+		(*it)->Update();
+	}
+
+	for (std::vector<Module*>::iterator it = modules.begin(); it != modules.end(); ++it)
+	{
+		(*it)->PostUpdate();
+	}
+
+	return UpdateState::UpdateContinue;
 }
 
 bool Application::CleanUp()

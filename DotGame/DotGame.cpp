@@ -1,14 +1,13 @@
-#include "pch.h"
-#include "SDL.h"
 #include "Application.h"
-#include <iostream>
 #include "Globals.h"
+#include <iostream>
+
+#include "SDL.h"
 
 Application* App = nullptr;
 
 int main(int argc, char* argv[])
 {
-
 	int mainReturn = EXIT_FAILURE;
 	MainStates mState = MainStates::Create;
 
@@ -22,6 +21,7 @@ int main(int argc, char* argv[])
 			mState = MainStates::Init;
 			break;
 		case MainStates::Init:
+
 			if (!App->Init())
 			{
 				mState = MainStates::Exit;
@@ -30,9 +30,23 @@ int main(int argc, char* argv[])
 			{
 				mState = MainStates::Update;
 			}
+
 			break;
 		case MainStates::Update:
-			break;
+			{
+				UpdateState updateStatus = UpdateState::UpdateContinue;
+
+				if (App->Update() != UpdateState::UpdateContinue)
+				{
+					mState = MainStates::Finish;
+				}
+				else
+				{
+					mState = MainStates::Update;
+				}
+
+				break;
+			}
 		case MainStates::Finish:
 			break;
 		}

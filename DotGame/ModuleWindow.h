@@ -16,7 +16,7 @@ public:
 	bool Init() override;
 	bool CleanUp() override;
 
-private:
+public:
 	//The window we'll render
 	SDL_Window* window = nullptr;
 

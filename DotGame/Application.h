@@ -17,6 +17,9 @@ public:
 	~Application();
 
 	bool Init();
+
+	UpdateState Update();
+
 	bool CleanUp();
 
 public:
@@ -27,5 +30,7 @@ public:
 private:
 	std::vector<Module*> modules;
 };
+
+extern Application* App;
 
 #endif // APPLICATION_H

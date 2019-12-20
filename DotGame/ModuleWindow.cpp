@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "ModuleWindow.h"
 
 #include "Globals.h"
@@ -18,7 +17,7 @@ bool ModuleWindow::Init()
 {
 	bool result = true;
 
-	if(SDL_Init(SDL_INIT_EVERYTHING )<0)
+	if(SDL_Init(SDL_INIT_VIDEO )<0)
 	{
 		assert(0); //Failed SDL initialization
 		result = false;
@@ -46,12 +45,17 @@ bool ModuleWindow::Init()
 
 	}
 
-
-
 	return result;
 }
 
 bool ModuleWindow::CleanUp()
 {
-	return false;
+	//Destroy SDL window
+	if (window != nullptr)
+	{
+		SDL_DestroyWindow(window);
+	}
+
+	SDL_Quit();
+	return true;
 }
