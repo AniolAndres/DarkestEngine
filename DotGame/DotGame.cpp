@@ -1,16 +1,43 @@
-// DotGame.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
-//
-
 #include "pch.h"
 #include "SDL.h"
+#include "Application.h"
 #include <iostream>
+#include "Globals.h"
+
+Application* App = nullptr;
 
 int main(int argc, char* argv[])
 {
-	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
+
+	int mainReturn = EXIT_FAILURE;
+	MainStates mState = MainStates::Create;
+
+	while (mState != MainStates::Exit)
 	{
-		std::cout << "SDL could not initialize with error: " << SDL_GetError() << std::endl;
+		switch (mState)
+		{
+		case MainStates::Create:
+			//Create the application
+			App = new Application();
+			mState = MainStates::Init;
+			break;
+		case MainStates::Init:
+			if (!App->Init())
+			{
+				mState = MainStates::Exit;
+			}
+			else
+			{
+				mState = MainStates::Update;
+			}
+			break;
+		case MainStates::Update:
+			break;
+		case MainStates::Finish:
+			break;
+		}
 	}
+
     
 	return EXIT_SUCCESS;
 }
