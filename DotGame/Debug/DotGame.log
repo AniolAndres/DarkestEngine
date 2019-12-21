@@ -1,2 +1,4 @@
-﻿  ModuleRender.cpp
+﻿  ModuleInput.cpp
+d:\deures mvj\krakenrepo\dotgame\dotgame\moduleinput.cpp(79): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+d:\deures mvj\krakenrepo\dotgame\dotgame\moduleinput.cpp(80): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
   DotGame.vcxproj -> D:\DEURES MVJ\KrakenRepo\DotGame\Debug\DotGame.exe

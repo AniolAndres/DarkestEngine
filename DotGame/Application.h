@@ -8,6 +8,7 @@
 class ModuleWindow;
 class ModuleRender;
 class ModuleInput;
+class ModuleTextures;
 
 
 class Application
@@ -24,6 +25,7 @@ public:
 
 public:
 	ModuleWindow* window = nullptr;
+	ModuleTextures* textures = nullptr;
 	ModuleRender* render = nullptr;
 	ModuleInput* input = nullptr;
 

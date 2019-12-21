@@ -51,7 +51,22 @@ UpdateState ModuleInput::PreUpdate()
 			windowEvents[EventQuit] = true;
 			break;
 		case SDL_WINDOWEVENT:
+			switch (event.window.event)
+			{
+			case SDL_WINDOWEVENT_HIDDEN:
+			case SDL_WINDOWEVENT_MINIMIZED:
+			case SDL_WINDOWEVENT_FOCUS_LOST:
 
+				windowEvents[EventHide] = true;
+				break;
+
+			case SDL_WINDOWEVENT_SHOWN:
+			case SDL_WINDOWEVENT_FOCUS_GAINED:
+			case SDL_WINDOWEVENT_MAXIMIZED:
+			case SDL_WINDOWEVENT_RESTORED:
+				windowEvents[EventShow] = true;
+				break;
+			}
 
 			break;
 		case SDL_MOUSEBUTTONDOWN:

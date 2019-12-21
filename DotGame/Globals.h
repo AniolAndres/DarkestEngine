@@ -19,7 +19,7 @@ enum class UpdateState
 // Configuration -----------
 #define SCREEN_WIDTH 384
 #define SCREEN_HEIGHT 224
-#define SCREEN_SIZE 2
+#define SCREEN_SIZE 3
 #define TITLE "DotGame"
 
 

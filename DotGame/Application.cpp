@@ -2,6 +2,7 @@
 
 #include "ModuleInput.h"
 #include "ModuleRender.h"
+#include "ModuleTextures.h"
 #include "ModuleWindow.h"
 
 Application::Application()
@@ -20,6 +21,7 @@ bool Application::Init()
 	modules.push_back(input = new ModuleInput());
 	modules.push_back(window = new ModuleWindow());
 	modules.push_back(render = new ModuleRender());
+	modules.push_back(textures = new ModuleTextures());
 
 	bool result = true;
 
