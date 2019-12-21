@@ -10,6 +10,7 @@ class ModuleRender;
 class ModuleInput;
 class ModuleTextures;
 class ModuleTime;
+class ModuleGame;
 
 class Application
 {
@@ -29,6 +30,7 @@ public:
 	ModuleRender* render = nullptr;
 	ModuleInput* input = nullptr;
 	ModuleTime* time = nullptr;
+	ModuleGame* game = nullptr;
 
 private:
 	std::vector<Module*> modules;

@@ -1,6 +1,8 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
+#include "SDL_rect.h"
+
 enum class MainStates
 {
 	Create,

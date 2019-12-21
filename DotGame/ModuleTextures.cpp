@@ -6,6 +6,7 @@
 #include "SDL_image.h"
 
 #include <assert.h>
+#include <iostream>
 
 ModuleTextures::ModuleTextures()
 {
@@ -23,8 +24,9 @@ bool ModuleTextures::Init()
 	int flags = IMG_INIT_PNG;
 	int init = IMG_Init(flags);
 
-	if (init != 0)
+	if (init == 0)
 	{
+		std::cout << "Could not initialize texture module with: " << IMG_GetError() << std::endl;
 		assert(0); // Could not initialize texture module correctly
 		result = false;
 	}
@@ -39,7 +41,9 @@ SDL_Texture * ModuleTextures::Load(const char * path)
 
 	if (surface == nullptr)
 	{
+		std::cout << "Could not create surface because: " << SDL_GetError() << std::endl;
 		assert(0); //Surface could not be created!
+		
 	}
 	else
 	{

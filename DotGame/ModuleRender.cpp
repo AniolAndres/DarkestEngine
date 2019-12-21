@@ -55,7 +55,7 @@ bool ModuleRender::CleanUp()
 	return true;
 }
 
-bool ModuleRender::Draw(SDL_Texture* texture, int x, int y, SDL_Rect* section, float speed)
+bool ModuleRender::Draw(SDL_Texture* texture, int x, int y, SDL_Rect* section)
 {
 	bool ret = true;
 	SDL_Rect rect;

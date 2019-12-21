@@ -5,6 +5,7 @@
 #include "ModuleTextures.h"
 #include "ModuleTime.h"
 #include "ModuleWindow.h"
+#include "ModuleGame.h"
 
 Application::Application()
 {
@@ -24,10 +25,11 @@ bool Application::Init()
 	modules.push_back(render = new ModuleRender());
 	modules.push_back(textures = new ModuleTextures());
 	modules.push_back(time = new ModuleTime());
+	modules.push_back(game = new ModuleGame());
 
 	bool result = true;
 
-	for (std::vector<Module*>::iterator it = modules.begin(); it != modules.end(); ++it)
+	for (std::vector<Module*>::iterator it = modules.begin(); it != modules.end() && result != false ; ++it)
 	{
 		result = (*it)->Init();
 	}
