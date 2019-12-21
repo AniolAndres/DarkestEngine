@@ -36,6 +36,12 @@
     <ClInclude Include="ModuleTextures.h">
       <Filter>Modules</Filter>
     </ClInclude>
+    <ClInclude Include="ModuleTime.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleGame.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ModuleWindow.cpp">
@@ -57,6 +63,12 @@
       <Filter>Utils</Filter>
     </ClCompile>
     <ClCompile Include="ModuleTextures.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleTime.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleGame.cpp">
       <Filter>Modules</Filter>
     </ClCompile>
   </ItemGroup>

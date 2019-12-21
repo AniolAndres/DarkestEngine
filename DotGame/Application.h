@@ -9,7 +9,7 @@ class ModuleWindow;
 class ModuleRender;
 class ModuleInput;
 class ModuleTextures;
-
+class ModuleTime;
 
 class Application
 {
@@ -28,6 +28,7 @@ public:
 	ModuleTextures* textures = nullptr;
 	ModuleRender* render = nullptr;
 	ModuleInput* input = nullptr;
+	ModuleTime* time = nullptr;
 
 private:
 	std::vector<Module*> modules;

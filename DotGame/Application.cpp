@@ -3,6 +3,7 @@
 #include "ModuleInput.h"
 #include "ModuleRender.h"
 #include "ModuleTextures.h"
+#include "ModuleTime.h"
 #include "ModuleWindow.h"
 
 Application::Application()
@@ -22,6 +23,7 @@ bool Application::Init()
 	modules.push_back(window = new ModuleWindow());
 	modules.push_back(render = new ModuleRender());
 	modules.push_back(textures = new ModuleTextures());
+	modules.push_back(time = new ModuleTime());
 
 	bool result = true;
 
