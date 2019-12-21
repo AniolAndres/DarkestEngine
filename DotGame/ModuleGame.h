@@ -20,7 +20,11 @@ public:
 private:
 
 	SDL_Texture* greenCircle = nullptr;
-	SDL_Rect greenCircleRectangle;
+	SDL_Texture* redCircle = nullptr;
+	SDL_Texture* tileBackGround = nullptr;
+	SDL_Texture* tileMouseOver = nullptr;
+
+	SDL_Rect rectangle64;
 
 };
 

@@ -55,7 +55,7 @@ bool ModuleRender::CleanUp()
 	return true;
 }
 
-bool ModuleRender::Draw(SDL_Texture* texture, int x, int y, SDL_Rect* section)
+bool ModuleRender::Draw(SDL_Texture* texture, int x, int y,float size, SDL_Rect* section)
 {
 	bool ret = true;
 	SDL_Rect rect;
@@ -72,8 +72,8 @@ bool ModuleRender::Draw(SDL_Texture* texture, int x, int y, SDL_Rect* section)
 		SDL_QueryTexture(texture, NULL, NULL, &rect.w, &rect.h);
 	}
 
-	rect.w *= SCREEN_SIZE;
-	rect.h *= SCREEN_SIZE;
+	rect.w *= SCREEN_SIZE / size;
+	rect.h *= SCREEN_SIZE / size;
 
 	if (SDL_RenderCopy(renderer, texture, section, &rect) != 0)
 	{

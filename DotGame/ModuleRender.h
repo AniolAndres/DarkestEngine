@@ -19,7 +19,7 @@ public:
 	UpdateState PostUpdate() override;
 
 	bool CleanUp() override;
-	bool Draw(SDL_Texture* texture, int x, int y, SDL_Rect* section);
+	bool Draw(SDL_Texture* texture, int x, int y,float size, SDL_Rect* section);
 
 public:
 	SDL_Renderer* renderer = nullptr;
