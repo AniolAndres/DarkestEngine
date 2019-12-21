@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "SDL.h"
+#include <assert.h>
 
 Application* App = nullptr;
 
@@ -48,10 +49,20 @@ int main(int argc, char* argv[])
 				break;
 			}
 		case MainStates::Finish:
+			if (!App->CleanUp())
+			{
+				assert(0); //Exiting with error at cleanUp
+			}
+			else
+			{
+				mainReturn = EXIT_SUCCESS;
+			}
+
+			mState = MainStates::Exit;
 			break;
 		}
 	}
 
     
-	return EXIT_SUCCESS;
+	return mainReturn;
 }

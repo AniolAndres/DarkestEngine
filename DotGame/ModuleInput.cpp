@@ -29,6 +29,11 @@ UpdateState ModuleInput::PreUpdate()
 {
 	static SDL_Event event;
 
+	for (int i = 0; i < EventCount; ++i)
+	{
+		windowEvents[i] = false;
+	}
+
 	for (int i = 0; i < NUM_MOUSE_BUTTONS; ++i)
 	{
 		if (mouseButtons[i] == KeyState::KeyDown)
@@ -42,12 +47,24 @@ UpdateState ModuleInput::PreUpdate()
 	{
 		switch (event.type)
 		{
+		case SDL_QUIT:
+			windowEvents[EventQuit] = true;
+			break;
 		case SDL_WINDOWEVENT:
+
+
 			break;
 		case SDL_MOUSEBUTTONDOWN:
+			mouseButtons[event.button.button - 1] = KeyState::KeyDown;
 			break;
 		case SDL_MOUSEBUTTONUP:
+			mouseButtons[event.button.button - 1] = KeyState::KeyUp;
 			break;
+		case SDL_MOUSEMOTION:
+			mousePosition.x = event.motion.x / SCREEN_SIZE;
+			mousePosition.y = event.motion.y / SCREEN_SIZE;
+			break;
+
 		}
 	}
 
@@ -64,6 +81,5 @@ bool ModuleInput::CleanUp()
 
 bool ModuleInput::GetWindowEvent(EventWindow event) const
 {
-	return true;
-	/*return windowEvents[event];*/
+	return windowEvents[event];
 }

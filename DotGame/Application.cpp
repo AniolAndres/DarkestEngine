@@ -36,22 +36,24 @@ UpdateState Application::Update()
 	//Separating the update between three methods helps us diferentiate when each one is 
 	//called regardless of the order the modules are in the vector
 
-	for (std::vector<Module*>::iterator it = modules.begin(); it != modules.end(); ++it)
+	UpdateState result = UpdateState::UpdateContinue;
+
+	for (std::vector<Module*>::iterator it = modules.begin(); it != modules.end() && result == UpdateState::UpdateContinue; ++it)
 	{
-		(*it)->PreUpdate();
+		result = (*it)->PreUpdate();
 	}
 
-	for (std::vector<Module*>::iterator it = modules.begin(); it != modules.end(); ++it)
+	for (std::vector<Module*>::iterator it = modules.begin(); it != modules.end() && result == UpdateState::UpdateContinue; ++it)
 	{
-		(*it)->Update();
+		result = (*it)->Update();
 	}
 
-	for (std::vector<Module*>::iterator it = modules.begin(); it != modules.end(); ++it)
+	for (std::vector<Module*>::iterator it = modules.begin(); it != modules.end() && result == UpdateState::UpdateContinue; ++it)
 	{
-		(*it)->PostUpdate();
+		result = (*it)->PostUpdate();
 	}
 
-	return UpdateState::UpdateContinue;
+	return result;
 }
 
 bool Application::CleanUp()

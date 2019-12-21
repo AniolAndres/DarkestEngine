@@ -33,6 +33,9 @@
     <ClInclude Include="Vector2.h">
       <Filter>Utils</Filter>
     </ClInclude>
+    <ClInclude Include="ModuleTextures.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ModuleWindow.cpp">
@@ -52,6 +55,9 @@
     </ClCompile>
     <ClCompile Include="Vector2.cpp">
       <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleTextures.cpp">
+      <Filter>Modules</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

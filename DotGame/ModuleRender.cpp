@@ -47,5 +47,39 @@ UpdateState ModuleRender::PostUpdate()
 
 bool ModuleRender::CleanUp()
 {
+	//Destroy window
+	if (renderer != nullptr)
+	{
+		SDL_DestroyRenderer(renderer);
+	}
 	return true;
+}
+
+bool ModuleRender::Draw(SDL_Texture* texture, int x, int y, SDL_Rect* section, float speed)
+{
+	bool ret = true;
+	SDL_Rect rect;
+	rect.x = x * SCREEN_SIZE;
+	rect.y = y * SCREEN_SIZE;
+
+	if (section != NULL)
+	{
+		rect.w = section->w;
+		rect.h = section->h;
+	}
+	else
+	{
+		SDL_QueryTexture(texture, NULL, NULL, &rect.w, &rect.h);
+	}
+
+	rect.w *= SCREEN_SIZE;
+	rect.h *= SCREEN_SIZE;
+
+	if (SDL_RenderCopy(renderer, texture, section, &rect) != 0)
+	{
+		assert(0); //Could not blit to screen
+		ret = false;
+	}
+
+	return ret;
 }

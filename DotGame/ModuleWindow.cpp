@@ -25,8 +25,8 @@ bool ModuleWindow::Init()
 	else
 	{
 		//Create and SDL window
-		int width = SCREEN_WIDTH;
-		int height = SCREEN_HEIGHT;
+		int width = SCREEN_WIDTH * SCREEN_SIZE;
+		int height = SCREEN_HEIGHT * SCREEN_SIZE;
 
 		Uint32 flags = SDL_WINDOW_SHOWN;	
 

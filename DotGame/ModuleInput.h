@@ -6,7 +6,6 @@
 #include "Vector2.h"
 
 #define NUM_MOUSE_BUTTONS 5
-#define NUM_WINDOW_EVENTS 3
 
 enum class KeyState
 {
@@ -16,11 +15,12 @@ enum class KeyState
 	KeyRepeat
 };
 
-enum class EventWindow
+enum EventWindow
 {
-	EventQuit,
+	EventQuit = 0,
 	EventHide,
-	EventShow
+	EventShow,
+	EventCount
 };
 
 class ModuleInput :
@@ -37,7 +37,7 @@ public:
 	bool GetWindowEvent(EventWindow event) const;
 
 private:
-	bool windowEvents[NUM_WINDOW_EVENTS];
+	bool windowEvents[EventCount];
 
 	Vector2 mousePosition;
 	KeyState mouseButtons[NUM_MOUSE_BUTTONS];
