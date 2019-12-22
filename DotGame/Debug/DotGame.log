@@ -1,4 +1,1 @@
-﻿  GameStateOver.cpp
-d:\deures mvj\krakenrepo\dotgame\dotgame\gamestateover.cpp(38): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-d:\deures mvj\krakenrepo\dotgame\dotgame\gamestateover.cpp(40): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-  DotGame.vcxproj -> D:\DEURES MVJ\KrakenRepo\DotGame\Debug\DotGame.exe
+﻿  DotGame.vcxproj -> D:\DEURES MVJ\KrakenRepo\DotGame\Debug\DotGame.exe
