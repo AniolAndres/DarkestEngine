@@ -11,9 +11,10 @@ public:
 	~GameStatePlaying();
 
 	void ChangeState() override;
+	void Enter() override;
 	void Update() override;
 
-	int score = 0;
+	bool end = false;
 };
 
 #endif // GAMESTATEPLAYING_H

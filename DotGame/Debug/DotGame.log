@@ -1,16 +1,6 @@
-﻿  Application.cpp
-  DotGame.cpp
-  GameStateIntro.cpp
-  GameStatePlaying.cpp
-  ModuleGame.cpp
-  ModuleInput.cpp
-d:\deures mvj\krakenrepo\dotgame\dotgame\moduleinput.cpp(79): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-d:\deures mvj\krakenrepo\dotgame\dotgame\moduleinput.cpp(80): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-  ModuleRender.cpp
-d:\deures mvj\krakenrepo\dotgame\dotgame\modulerender.cpp(75): warning C4244: '*=': conversión de 'float' a 'int'; posible pérdida de datos
-d:\deures mvj\krakenrepo\dotgame\dotgame\modulerender.cpp(76): warning C4244: '*=': conversión de 'float' a 'int'; posible pérdida de datos
-  ModuleTextures.cpp
-  ModuleTime.cpp
-  ModuleWindow.cpp
-  Generando código...
+﻿  Cell.cpp
+d:\deures mvj\krakenrepo\dotgame\dotgame\cell.cpp(26): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+d:\deures mvj\krakenrepo\dotgame\dotgame\cell.cpp(29): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+d:\deures mvj\krakenrepo\dotgame\dotgame\cell.cpp(32): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+d:\deures mvj\krakenrepo\dotgame\dotgame\cell.cpp(38): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
   DotGame.vcxproj -> D:\DEURES MVJ\KrakenRepo\DotGame\Debug\DotGame.exe

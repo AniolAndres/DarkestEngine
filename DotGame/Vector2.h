@@ -22,6 +22,13 @@ public:
 		return result;
 	}
 
+	Vector2 operator / (float const &f) {
+		Vector2 result;
+		result.x = x/f;
+		result.y = y/f;
+		return result;
+	}
+
 public:
 	float x = 0.0f;
 	float y = 0.0f;

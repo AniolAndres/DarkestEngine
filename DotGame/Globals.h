@@ -25,8 +25,8 @@ enum class UpdateState
 #define TITLE "DotGame"
 
 
-#define ROWS_NUMBER 10
-#define COLUMS_NUMBER 11
+#define ROWS_NUMBER 11
+#define COLUMS_NUMBER 10
 
 
 #endif // GLOBALS_H

@@ -2,7 +2,7 @@
 #define MODULEINPUT_H
 
 #include "Module.h"
-
+#include "SDL_scancode.h"
 #include "Vector2.h"
 
 #define NUM_MOUSE_BUTTONS 5
@@ -35,6 +35,11 @@ public:
 	bool CleanUp() override;
 
 	bool GetWindowEvent(EventWindow event) const;
+	Vector2 GetMousePosition() const {return mousePosition; }
+	KeyState GetMouseButtonDown(int id) const
+	{
+		return mouseButtons[id - 1];
+	}
 
 private:
 	bool windowEvents[EventCount];

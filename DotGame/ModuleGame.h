@@ -25,6 +25,8 @@ public:
 	void LoadTextures();
 public:
 
+	int score = 0;
+
 	GameState* currentState = nullptr;
 
 	GameStateIntro* intro = nullptr;
@@ -38,7 +40,7 @@ public:
 
 	SDL_Rect rectangle64;
 
-	Cell grid[ROWS_NUMBER][COLUMS_NUMBER];
+	Cell grid[COLUMS_NUMBER][ROWS_NUMBER];
 
 private:
 

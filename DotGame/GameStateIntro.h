@@ -13,7 +13,7 @@ public:
 	void Update() override;
 
 	float timer = 0.0f;
-	float duration = 5.0f;
+	float duration = 1.0f;
 };
 
 #endif // GAMESTATEINTRO_H
