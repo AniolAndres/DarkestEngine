@@ -1,2 +1,5 @@
-﻿  ModuleGame.cpp
+﻿  GameStateIntro.cpp
+  GameStateOver.cpp
+  GameStatePlaying.cpp
+  Generando código...
   DotGame.vcxproj -> D:\DEURES MVJ\KrakenRepo\DotGame\Debug\DotGame.exe

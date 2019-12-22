@@ -34,7 +34,7 @@ bool ModuleRender::Init()
 
 UpdateState ModuleRender::PreUpdate()
 {
-	SDL_SetRenderDrawColor(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
+	SDL_SetRenderDrawColor(renderer, 0, 0, 0, SDL_ALPHA_TRANSPARENT);
 	SDL_RenderClear(renderer);
 	return UpdateState::UpdateContinue;
 }

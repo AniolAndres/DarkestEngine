@@ -3,6 +3,7 @@
 
 #include "Module.h"
 #include "Globals.h"
+#include "Vector2.h"
 
 struct SDL_Texture;
 struct SDL_Rect;
@@ -25,6 +26,8 @@ private:
 	SDL_Texture* tileMouseOver = nullptr;
 
 	SDL_Rect rectangle64;
+
+	Vector2 grid[5][5];
 
 };
 

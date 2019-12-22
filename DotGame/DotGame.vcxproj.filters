@@ -10,6 +10,9 @@
     <Filter Include="Utils">
       <UniqueIdentifier>{4f18039b-1899-46f3-bf37-3634f1f156af}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{e4959d57-a9d6-4d66-9e00-78338c50cbef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Module.h">
@@ -42,6 +45,18 @@
     <ClInclude Include="ModuleGame.h">
       <Filter>Modules</Filter>
     </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStateIntro.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStatePlaying.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStateOver.h">
+      <Filter>Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ModuleWindow.cpp">
@@ -70,6 +85,18 @@
     </ClCompile>
     <ClCompile Include="ModuleGame.cpp">
       <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStateIntro.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStatePlaying.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStateOver.cpp">
+      <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

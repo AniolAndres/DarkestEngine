@@ -30,10 +30,20 @@ bool ModuleGame::Init()
 
 UpdateState ModuleGame::Update()
 {
-	App->render->Draw(greenCircle, 150, 120, 5.0f, &rectangle64);
-	App->render->Draw(redCircle, 200, 200, 5.0f, &rectangle64);
-	App->render->Draw(tileBackGround, 50, 50, 5.0f, &rectangle64);
-	App->render->Draw(tileMouseOver, 50, 200, 5.0f, &rectangle64);
+	for (int i = 0; i < SCREEN_WIDTH*SCREEN_SIZE; i += 16)
+	{
+		App->render->Draw(greenCircle, i, 120, 4.0f, &rectangle64);
+	}
+
+	//for (int i = 0; i < SCREEN_HEIGHT*SCREEN_SIZE; i += 32)
+	//{
+	//	App->render->Draw(redCircle, 120, i, 2.0f, &rectangle64);
+	//}
+
+	//App->render->Draw(greenCircle, 150, 120, 2.0f, &rectangle64);
+	//App->render->Draw(redCircle, 200, 200, 2.0f, &rectangle64);
+	//App->render->Draw(tileBackGround, 50, 50, 2.0f, &rectangle64);
+	//App->render->Draw(tileMouseOver, 50, 200, 2.0f, &rectangle64);
 
 	return UpdateState::UpdateContinue;
 }
