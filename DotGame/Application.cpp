@@ -71,5 +71,7 @@ bool Application::CleanUp()
 		result = (*it)->CleanUp();
 	}
 
+	modules.clear();
+
 	return result;
 }

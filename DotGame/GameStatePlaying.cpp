@@ -77,13 +77,13 @@ void GameStatePlaying::Update()
 	//mouseclick
 	if (clickedLeft || clickedRight)
 	{
-		if (clickedLeft && game->grid[xTile][yTile].state == CellState::Green)
+		if (clickedLeft && !game->grid[xTile][yTile].isScore && game->grid[xTile][yTile].state == CellState::Green)
 		{
 			game->grid[game->score][0].state = CellState::Green;
 			++game->score;
 			CellHasBeenClicked(spawnX, spawnY);
 		}
-		else if (clickedRight && game->grid[xTile][yTile].state == CellState::Red)
+		else if (clickedRight && !game->grid[xTile][yTile].isScore && game->grid[xTile][yTile].state == CellState::Red)
 		{
 			game->grid[game->score][0].state = CellState::Red;
 			++game->score;

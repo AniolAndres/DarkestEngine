@@ -1,0 +1,27 @@
+﻿  Application.cpp
+  Cell.cpp
+d:\deures mvj\krakenrepo\dotgame\dotgame\cell.cpp(26): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+d:\deures mvj\krakenrepo\dotgame\dotgame\cell.cpp(29): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+d:\deures mvj\krakenrepo\dotgame\dotgame\cell.cpp(32): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+d:\deures mvj\krakenrepo\dotgame\dotgame\cell.cpp(38): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+d:\deures mvj\krakenrepo\dotgame\dotgame\cell.cpp(46): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+d:\deures mvj\krakenrepo\dotgame\dotgame\cell.cpp(49): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+  DotGame.cpp
+  GameStateIntro.cpp
+d:\deures mvj\krakenrepo\dotgame\dotgame\gamestateintro.cpp(32): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+  GameStateOver.cpp
+d:\deures mvj\krakenrepo\dotgame\dotgame\gamestateover.cpp(38): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+d:\deures mvj\krakenrepo\dotgame\dotgame\gamestateover.cpp(40): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+  GameStatePlaying.cpp
+d:\deures mvj\krakenrepo\dotgame\dotgame\gamestateplaying.cpp(35): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+  ModuleGame.cpp
+  ModuleRender.cpp
+d:\deures mvj\krakenrepo\dotgame\dotgame\modulerender.cpp(75): warning C4244: '*=': conversión de 'float' a 'int'; posible pérdida de datos
+d:\deures mvj\krakenrepo\dotgame\dotgame\modulerender.cpp(76): warning C4244: '*=': conversión de 'float' a 'int'; posible pérdida de datos
+  ModuleTextures.cpp
+  Generando código
+  0 of 268 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Generación de código finalizada
+  DotGame.vcxproj -> D:\DEURES MVJ\KrakenRepo\DotGame\Release\DotGame.exe

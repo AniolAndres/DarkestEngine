@@ -30,7 +30,7 @@ public:
 	ModuleRender* render = nullptr;
 	ModuleInput* input = nullptr;
 	ModuleTime* time = nullptr;
-	ModuleGame* game = nullptr;
+	ModuleGame* game = nullptr;	
 
 private:
 	std::vector<Module*> modules;
