@@ -2,11 +2,12 @@
 #define GAMESTATEPLAYING_H
 
 #include "GameState.h"
+
 class GameStatePlaying :
 	public GameState
 {
 public:
-	GameStatePlaying();
+	GameStatePlaying(ModuleGame* game);
 	~GameStatePlaying();
 };
 

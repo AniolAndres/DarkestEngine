@@ -2,8 +2,9 @@
 
 
 
-GameStateOver::GameStateOver()
+GameStateOver::GameStateOver(ModuleGame* game)
 {
+	this->game = game;
 }
 
 
