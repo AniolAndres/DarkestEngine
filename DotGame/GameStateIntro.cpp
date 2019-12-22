@@ -28,10 +28,10 @@ void GameStateIntro::ChangeState()
 
 void GameStateIntro::Update()
 {
-	App->render->Draw(game->greenCircle, 0, 150, 4.0f, &game->rectangle64);
+	//App->render->Draw(game->presentationP1, 10, (SCREEN_HEIGHT / 8) * SCREEN_SIZE , 10.0f, &game->presentRect1);
 
-	for (int i = 0; i < SCREEN_HEIGHT * SCREEN_SIZE; i += 16)
-	{
-		App->render->Draw(game->greenCircle, 50, i, 4.0f, &game->rectangle64);
-	}
+	//App->render->Draw(game->presentationP1, 10, (SCREEN_HEIGHT / 8) * SCREEN_SIZE, 10.0f, &game->presentRect1);
+
+	App->render->Draw(game->numbers, 10, (SCREEN_HEIGHT / 8) * SCREEN_SIZE, 10.0f, &game->number0);
+
 }

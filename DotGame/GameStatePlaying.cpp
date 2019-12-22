@@ -31,6 +31,7 @@ void GameStatePlaying::ChangeState()
 
 void GameStatePlaying::Enter()
 {
+	//So we have diferent random values every time we play
 	srand(time(NULL));
 
 	ResetVariables();
@@ -73,6 +74,7 @@ void GameStatePlaying::Update()
 	int xTile = (int)mousePosition.x;
 	int yTile = (int)mousePosition.y;
 
+	//mouseclick
 	if (clickedLeft || clickedRight)
 	{
 		if (clickedLeft && game->grid[xTile][yTile].state == CellState::Green)
