@@ -9,6 +9,13 @@ class GameStateOver :
 public:
 	GameStateOver(ModuleGame* game);
 	~GameStateOver();
+
+	void ChangeState() override;
+	void Update() override;
+
+	float timer = 0.0f;
+
+	float duration = 5.0f;
 };
 
 #endif // GAMESTATEOVER_H

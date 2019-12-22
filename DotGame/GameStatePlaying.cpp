@@ -4,6 +4,7 @@
 #include "ModuleRender.h"
 #include "ModuleGame.h"
 #include "ModuleInput.h"
+#include "ModuleTime.h"
 
 #include "Cell.h"
 #include "Globals.h"
@@ -49,17 +50,21 @@ void GameStatePlaying::Enter()
 
 void GameStatePlaying::Update()
 {
-	//int randomX = (rand() % 10); //We need +1 cause first row is score
-	//int randomY = rand() % 10 + 1;
+
 	//if (App->input->GetMouseButtonDown(1) == KeyState::KeyDown)
 	//{
 	//}
+
+	SpawnCircle();
+
+	//MouseOver
 	Vector2 mousePosition = App->input->GetMousePosition();
 	mousePosition = mousePosition / 16.0f;
 
 	int xTile = (int)mousePosition.x;
 	int yTile = (int)mousePosition.y;
 
+	//Grid drawing
 	for (int i = 0; i < COLUMS_NUMBER; ++i)
 	{
 		for (int j = 0; j < ROWS_NUMBER; ++j)
@@ -76,6 +81,48 @@ void GameStatePlaying::Update()
 				game->grid[i][j].DrawCell(game, xPos, yPos,false);
 			}
 			
+		}
+	}
+}
+
+void GameStatePlaying::SpawnCircle()
+{
+	if (circleSpawnTimer > timeBetweenCircles)
+	{
+		//SpawnCircle!
+		spawnX = (rand() % 10); //We need +1 cause first row is score
+		spawnY = rand() % 10 + 1;
+		int circleColor = rand() % 2;
+
+		switch (circleColor)
+		{
+			case 0:
+				game->grid[spawnX][spawnY].state = CellState::Green;
+				break;
+			case 1:
+				game->grid[spawnX][spawnY].state = CellState::Red;
+				break;	
+		}
+
+		circleSpawned = true;
+		circleSpawnTimer = 0.0f;
+	}
+	else
+	{
+		circleSpawnTimer += App->time->deltaTime;
+	}
+
+	if (circleSpawned)
+	{
+		if (clickTimer > timeToClick)
+		{
+			game->grid[spawnX][spawnY].state = CellState::Tile;
+			circleSpawned = false;
+			clickTimer = 0.0f;
+		}
+		else
+		{
+			clickTimer += App->time->deltaTime;
 		}
 	}
 }
