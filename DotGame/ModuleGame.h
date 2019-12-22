@@ -22,7 +22,12 @@ public:
 	bool CleanUp() override;
 
 	UpdateState Update() override;
+	
+private:
+
+	void CheckStates(GameState* previous);
 	void LoadTextures();
+
 public:
 
 	int score = 0;
@@ -49,9 +54,6 @@ public:
 
 	Cell grid[COLUMS_NUMBER][ROWS_NUMBER];
 
-private:
-
-	void CheckStates(GameState* previous);
 };
 
 #endif // MODULEEGAME_H

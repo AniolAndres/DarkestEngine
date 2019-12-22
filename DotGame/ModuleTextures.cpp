@@ -27,7 +27,7 @@ bool ModuleTextures::Init()
 	if (init == 0)
 	{
 		std::cout << "Could not initialize texture module with: " << IMG_GetError() << std::endl;
-		assert(0); // Could not initialize texture module correctly
+		assert(init); // Could not initialize texture module correctly
 		result = false;
 	}
 

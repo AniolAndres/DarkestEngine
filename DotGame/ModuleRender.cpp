@@ -25,7 +25,7 @@ bool ModuleRender::Init()
 
 	if (renderer == nullptr)
 	{
-		assert(0); //Renderer could not be created
+		assert(renderer != nullptr); //Renderer could not be created
 		result = false;
 	}
 

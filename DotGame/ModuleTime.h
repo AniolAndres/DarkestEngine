@@ -21,8 +21,6 @@ public:
 private:
 
 	int lastTick = 0;
-
-
 };
 
 #endif // MODULETIME_H

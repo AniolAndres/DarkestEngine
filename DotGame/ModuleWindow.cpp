@@ -34,7 +34,7 @@ bool ModuleWindow::Init()
 
 		if (window == nullptr)
 		{
-			assert(0); //Window could not be created
+			assert(window != nullptr); //Window could not be created
 			result = false;
 		}
 		else

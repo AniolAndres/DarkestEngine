@@ -18,11 +18,10 @@ public:
 	Cell();
 	~Cell();
 
-	bool isScore = false;
-
-	CellState state;
 	void DrawCell(ModuleGame* game, float x, float y, bool mouseOver);
 
+	bool isScore = false;
+	CellState state;
 	float defaultSize = 4.0f;
 };
 

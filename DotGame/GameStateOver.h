@@ -15,7 +15,6 @@ public:
 	void Update() override;
 
 	float timer = 0.0f;
-
 	float duration = 5.0f;
 };
 

@@ -16,7 +16,6 @@ public:
 
 	SDL_Texture* Load(const char* path);
 	void Unload(SDL_Texture* text);
-
 	bool CleanUp() override;
 
 private:

@@ -16,7 +16,6 @@ public:
 
 	void ResetVariables();
 	void CellHasBeenClicked(int x, int y);
-
 	void SpawnCircle();
 
 	bool end = false;
