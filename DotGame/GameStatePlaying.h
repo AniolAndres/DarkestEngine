@@ -14,9 +14,15 @@ public:
 	void Enter() override;
 	void Update() override;
 
+	void ResetVariables();
+	void CellHasBeenClicked(int x, int y);
+
 	void SpawnCircle();
 
 	bool end = false;
+
+	bool clickedRight = false;
+	bool clickedLeft = false;
 
 	bool circleSpawned = false;
 	int spawnX = 0;

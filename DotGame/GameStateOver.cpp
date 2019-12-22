@@ -27,7 +27,13 @@ void GameStateOver::ChangeState()
 	}
 }
 
+void GameStateOver::Exit()
+{
+	timer = 0.0f;
+}
+
 void GameStateOver::Update()
 {
 	//Print GameOver and score
 }
+

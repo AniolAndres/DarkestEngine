@@ -24,6 +24,8 @@ UpdateState ModuleTime::PreUpdate()
 
 	deltaTime = (actualTicks - lastTick) / 1000.0f;
 
+	acumulatedTime += deltaTime;
+
 	lastTick = actualTicks;
 
 	return UpdateState::UpdateContinue;

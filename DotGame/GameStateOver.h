@@ -11,6 +11,7 @@ public:
 	~GameStateOver();
 
 	void ChangeState() override;
+	void Exit() override;
 	void Update() override;
 
 	float timer = 0.0f;

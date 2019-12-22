@@ -1,4 +1,3 @@
 ﻿  GameStatePlaying.cpp
-  ModuleGame.cpp
-  Generando código...
+d:\deures mvj\krakenrepo\dotgame\dotgame\gamestateplaying.cpp(34): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
   DotGame.vcxproj -> D:\DEURES MVJ\KrakenRepo\DotGame\Debug\DotGame.exe

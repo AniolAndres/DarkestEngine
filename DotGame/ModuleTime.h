@@ -16,6 +16,7 @@ public:
 public:
 
 	float deltaTime = 0.0f;
+	float acumulatedTime = 0.0f;
 
 private:
 

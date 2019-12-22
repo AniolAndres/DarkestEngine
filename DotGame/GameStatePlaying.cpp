@@ -6,6 +6,8 @@
 #include "ModuleInput.h"
 #include "ModuleTime.h"
 
+
+#include <time.h>
 #include "Cell.h"
 #include "Globals.h"
 #include "Vector2.h"
@@ -29,8 +31,9 @@ void GameStatePlaying::ChangeState()
 
 void GameStatePlaying::Enter()
 {
-	game->score = 0;
+	srand(time(NULL));
 
+	ResetVariables();
 	//Set all tiles to be backGroundTiles
 
 	for (int i = 0; i < COLUMS_NUMBER; ++i)
@@ -50,10 +53,16 @@ void GameStatePlaying::Enter()
 
 void GameStatePlaying::Update()
 {
+	//1 and 3 are the respective codes for left click and right click this way I dont have to include SDL_MOUSE.h
 
-	//if (App->input->GetMouseButtonDown(1) == KeyState::KeyDown)
-	//{
-	//}
+	if (App->input->GetMouseButtonDown(1) == KeyState::KeyDown)
+	{
+		clickedLeft = true;
+	}
+	else if (App->input->GetMouseButtonDown(3) == KeyState::KeyDown)
+	{
+		clickedRight = true;
+	}
 
 	SpawnCircle();
 
@@ -63,6 +72,34 @@ void GameStatePlaying::Update()
 
 	int xTile = (int)mousePosition.x;
 	int yTile = (int)mousePosition.y;
+
+	if (clickedLeft || clickedRight)
+	{
+		if (clickedLeft && game->grid[xTile][yTile].state == CellState::Green)
+		{
+			game->grid[game->score][0].state = CellState::Green;
+			++game->score;
+			CellHasBeenClicked(spawnX, spawnY);
+		}
+		else if (clickedRight && game->grid[xTile][yTile].state == CellState::Red)
+		{
+			game->grid[game->score][0].state = CellState::Red;
+			++game->score;
+			CellHasBeenClicked(spawnX, spawnY);
+		}
+		else 
+		{
+			end = true;
+		}
+
+		if (game->score == 10)
+		{
+			end = true;
+		}
+
+		clickedLeft = clickedRight = false;
+	}
+
 
 	//Grid drawing
 	for (int i = 0; i < COLUMS_NUMBER; ++i)
@@ -83,6 +120,21 @@ void GameStatePlaying::Update()
 			
 		}
 	}
+}
+
+void GameStatePlaying::ResetVariables()
+{
+	game->score = 0;
+	end = false;
+	clickTimer = 0.0f;
+	circleSpawnTimer = 0.0f;
+}
+
+void GameStatePlaying::CellHasBeenClicked(int x, int y)
+{
+	game->grid[x][y].state = CellState::Tile;
+	clickTimer = 0.0f;
+	circleSpawned = false;
 }
 
 void GameStatePlaying::SpawnCircle()
@@ -116,9 +168,7 @@ void GameStatePlaying::SpawnCircle()
 	{
 		if (clickTimer > timeToClick)
 		{
-			game->grid[spawnX][spawnY].state = CellState::Tile;
-			circleSpawned = false;
-			clickTimer = 0.0f;
+			CellHasBeenClicked(spawnX, spawnY);
 		}
 		else
 		{

@@ -38,4 +38,16 @@ void Cell::DrawCell(ModuleGame* game, float x, float y, bool mouseOver)
 			App->render->Draw(game->tileMouseOver, x, y, defaultSize, &game->rectangle64);
 		}
 	}
+	else // if it's score we can only have red and green
+	{
+		switch (state)
+		{
+			case CellState::Red:
+				App->render->Draw(game->redCircle, x, y, defaultSize, &game->rectangle64);
+				break;
+			case CellState::Green:
+				App->render->Draw(game->greenCircle, x, y, defaultSize, &game->rectangle64);
+				break;
+		}
+	}
 }
