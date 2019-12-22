@@ -28,10 +28,9 @@ void GameStateIntro::ChangeState()
 
 void GameStateIntro::Update()
 {
-	//App->render->Draw(game->presentationP1, 10, (SCREEN_HEIGHT / 8) * SCREEN_SIZE , 10.0f, &game->presentRect1);
+	//Draw the intro text
+	App->render->Draw(game->presentation, 30, SCREEN_HEIGHT / 2.5f, 9.0f, &game->presentRect);
 
-	//App->render->Draw(game->presentationP1, 10, (SCREEN_HEIGHT / 8) * SCREEN_SIZE, 10.0f, &game->presentRect1);
-
-	App->render->Draw(game->numbers, 10, (SCREEN_HEIGHT / 8) * SCREEN_SIZE, 10.0f, &game->number0);
+	//App->render->Draw(game->numbers, 10, (SCREEN_HEIGHT / 8) * SCREEN_SIZE, 10.0f, &game->number0);
 
 }

@@ -35,5 +35,8 @@ void GameStateOver::Exit()
 void GameStateOver::Update()
 {
 	//Print GameOver and score
+	App->render->Draw(game->gameOver, SCREEN_WIDTH * 0.1f, SCREEN_HEIGHT * 0.45f, 12.0f, &game->gameOverRect);
+
+	App->render->Draw(game->numbers, SCREEN_WIDTH * 0.89f, SCREEN_HEIGHT * 0.45f, 10.0f, &game->numberRectangles[game->score]);
 }
 

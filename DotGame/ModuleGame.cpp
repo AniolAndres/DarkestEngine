@@ -20,72 +20,72 @@ ModuleGame::ModuleGame()
 	rectangle64.h = 64;
 
 	//Texts will have each its own rectangle
-	presentRect1.x = 0;
-	presentRect1.y = 0;
-	presentRect1.w = 1377;
-	presentRect1.h = 313;
+	presentRect.x = 0;
+	presentRect.y = 0;
+	presentRect.w = 864;
+	presentRect.h = 176;
 
-	presentRect2.x = 0;
-	presentRect2.y = 0;
-	presentRect2.w = 878;
-	presentRect2.h = 156;
+	//GameOver Text
+	gameOverRect.x = 0;
+	gameOverRect.y = 0;
+	gameOverRect.w = 1475;
+	gameOverRect.h = 131;
 
 	//Numbers will have same widths and heights but they all will have their own
-	number0.x = 1100;
-	number0.y = 0;
-	number0.h = 130;
-	number0.w = 80;
+	numberRectangles[0].x = 1100;
+	numberRectangles[0].y = 0;
+	numberRectangles[0].h = 130;
+	numberRectangles[0].w = 80;
 
-	number1.x = 0;
-	number1.y = 0;
-	number1.h = 130;
-	number1.w = 117;
+	numberRectangles[1].x = 0;
+	numberRectangles[1].y = 0;
+	numberRectangles[1].h = 130;
+	numberRectangles[1].w = 117;
 
-	number2.x = 117;
-	number2.y = 0;
-	number2.h = 130;
-	number2.w = 117;
+	numberRectangles[2].x = 117;
+	numberRectangles[2].y = 0;
+	numberRectangles[2].h = 130;
+	numberRectangles[2].w = 117;
 
-	number3.x = 220;
-	number3.y = 0;
-	number3.h = 130;
-	number3.w = 117;
+	numberRectangles[3].x = 220;
+	numberRectangles[3].y = 0;
+	numberRectangles[3].h = 130;
+	numberRectangles[3].w = 117;
 
-	number4.x = 320;
-	number4.y = 0;
-	number4.h = 130;
-	number4.w = 117;
+	numberRectangles[4].x = 320;
+	numberRectangles[4].y = 0;
+	numberRectangles[4].h = 130;
+	numberRectangles[4].w = 117;
 
+	numberRectangles[5].x = 430;
+	numberRectangles[5].y = 0;
+	numberRectangles[5].h = 130;
+	numberRectangles[5].w = 117;
 
-	number5.x = 430;
-	number5.y = 0;
-	number5.h = 130;
-	number5.w = 117;
+	numberRectangles[6].x = 540;
+	numberRectangles[6].y = 0;
+	numberRectangles[6].h = 130;
+	numberRectangles[6].w = 117;
 
-	number6.x = 540;
-	number6.y = 0;
-	number6.h = 130;
-	number6.w = 117;
+	numberRectangles[7].x = 650;
+	numberRectangles[7].y = 0;
+	numberRectangles[7].h = 130;
+	numberRectangles[7].w = 117;
 
-	number7.x = 650;
-	number7.y = 0;
-	number7.h = 130;
-	number7.w = 117;
+	numberRectangles[8].x = 760;
+	numberRectangles[8].y = 0;
+	numberRectangles[8].h = 130;
+	numberRectangles[8].w = 117;
 
-	number8.x = 760;
-	number8.y = 0;
-	number8.h = 130;
-	number8.w = 117;
+	numberRectangles[9].x = 870;
+	numberRectangles[9].y = 0;
+	numberRectangles[9].h = 130;
+	numberRectangles[9].w = 117;
 
-	number9.x = 870;
-	number9.y = 0;
-	number9.h = 130;
-	number9.w = 117;
-
-	number10.x = 1000;
-	number10.y = 0;
-	number10.h = 130;
-	number10.w = 170;
+	numberRectangles[10].x = 1000;
+	numberRectangles[10].y = 0;
+	numberRectangles[10].h = 130;
+	numberRectangles[10].w = 170;
 }
 
 
@@ -142,9 +142,9 @@ void ModuleGame::LoadTextures()
 	redCircle = App->textures->Load("ClickableRed.png");
 	tileBackGround = App->textures->Load("TileBackground.png");
 	tileMouseOver = App->textures->Load("TileMouseOver.png");
-	presentationP1 = App->textures->Load("AniolPresents.png");
-	presentationP2 = App->textures->Load("TheDotGame.png");
+	presentation = App->textures->Load("Presentation.png");
 	numbers = App->textures->Load("numbers.png");
+	gameOver = App->textures->Load("GameOver.png");
 }
 
 void ModuleGame::CheckStates(GameState * previous)
