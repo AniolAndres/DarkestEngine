@@ -9,6 +9,11 @@ class GameStatePlaying :
 public:
 	GameStatePlaying(ModuleGame* game);
 	~GameStatePlaying();
+
+	void ChangeState() override;
+	void Update() override;
+
+	int score = 0;
 };
 
 #endif // GAMESTATEPLAYING_H

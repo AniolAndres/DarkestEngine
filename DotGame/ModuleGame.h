@@ -3,7 +3,7 @@
 
 #include "Module.h"
 #include "Globals.h"
-#include "Vector2.h"
+#include "Cell.h"
 
 struct SDL_Texture;
 struct SDL_Rect;
@@ -38,7 +38,7 @@ public:
 
 	SDL_Rect rectangle64;
 
-	Vector2 grid[5][5];
+	Cell grid[ROWS_NUMBER][COLUMS_NUMBER];
 
 private:
 

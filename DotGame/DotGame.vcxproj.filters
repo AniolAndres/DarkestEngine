@@ -57,6 +57,9 @@
     <ClInclude Include="GameStateOver.h">
       <Filter>Game</Filter>
     </ClInclude>
+    <ClInclude Include="Cell.h">
+      <Filter>Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ModuleWindow.cpp">
@@ -96,6 +99,9 @@
       <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="GameStateOver.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Cell.cpp">
       <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>

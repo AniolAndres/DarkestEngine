@@ -8,6 +8,20 @@ public:
 	Vector2(float x, float y);
 	~Vector2();
 
+	Vector2 operator + (Vector2 const &vec2) {
+		Vector2 result;
+		result.x = x + vec2.x;
+		result.y = y + vec2.y;
+		return result;
+	}
+
+	Vector2 operator - (Vector2 const &vec2) {
+		Vector2 result;
+		result.x = x - vec2.x;
+		result.y = y - vec2.y;
+		return result;
+	}
+
 public:
 	float x = 0.0f;
 	float y = 0.0f;

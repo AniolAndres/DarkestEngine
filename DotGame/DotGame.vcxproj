@@ -156,6 +156,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
+    <ClInclude Include="Cell.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="GameStateIntro.h" />
     <ClInclude Include="GameStateOver.h" />
@@ -172,6 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Cell.cpp" />
     <ClCompile Include="DotGame.cpp" />
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="GameStateIntro.cpp" />

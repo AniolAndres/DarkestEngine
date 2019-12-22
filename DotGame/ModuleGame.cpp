@@ -9,6 +9,8 @@
 #include "GameStateOver.h"
 #include "GameStatePlaying.h"
 
+#include "Vector2.h"
+
 ModuleGame::ModuleGame()
 {
 	//All png given in assets are 64x64 so we only need one SDL rect
