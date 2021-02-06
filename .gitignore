@@ -6,6 +6,7 @@
 *.lo
 *.o
 *.obj
+*.iobj
 
 # Visual Studio 2015 cache/options directory
 .vs/
