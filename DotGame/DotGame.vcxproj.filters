@@ -10,9 +10,6 @@
     <Filter Include="Utils">
       <UniqueIdentifier>{4f18039b-1899-46f3-bf37-3634f1f156af}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game">
-      <UniqueIdentifier>{e4959d57-a9d6-4d66-9e00-78338c50cbef}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Module.h">
@@ -42,24 +39,6 @@
     <ClInclude Include="ModuleTime.h">
       <Filter>Modules</Filter>
     </ClInclude>
-    <ClInclude Include="ModuleGame.h">
-      <Filter>Modules</Filter>
-    </ClInclude>
-    <ClInclude Include="GameState.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="GameStateIntro.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="GameStatePlaying.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="GameStateOver.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Cell.h">
-      <Filter>Game</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ModuleWindow.cpp">
@@ -74,9 +53,6 @@
     <ClCompile Include="Application.cpp">
       <Filter>Main</Filter>
     </ClCompile>
-    <ClCompile Include="DotGame.cpp">
-      <Filter>Main</Filter>
-    </ClCompile>
     <ClCompile Include="Vector2.cpp">
       <Filter>Utils</Filter>
     </ClCompile>
@@ -86,23 +62,8 @@
     <ClCompile Include="ModuleTime.cpp">
       <Filter>Modules</Filter>
     </ClCompile>
-    <ClCompile Include="ModuleGame.cpp">
-      <Filter>Modules</Filter>
-    </ClCompile>
-    <ClCompile Include="GameState.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="GameStateIntro.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="GameStatePlaying.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="GameStateOver.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Cell.cpp">
-      <Filter>Game</Filter>
+    <ClCompile Include="DarkestEngine.cpp">
+      <Filter>Main</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
