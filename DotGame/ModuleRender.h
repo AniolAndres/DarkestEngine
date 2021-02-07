@@ -19,10 +19,15 @@ public:
 	UpdateState PostUpdate() override;
 
 	bool CleanUp() override;
-	bool Draw(SDL_Texture* texture, int x, int y,float size, SDL_Rect* section);
+	void CreateTriangle();
 
 public:
 	SDL_Renderer* renderer = nullptr;
+	float vertices[9] = {
+	-0.5f, -0.5f, 0.0f,
+	 0.5f, -0.5f, 0.0f,
+	 0.0f,  0.5f, 0.0f
+	};
 };
 
 #endif // MODULERENDER_H

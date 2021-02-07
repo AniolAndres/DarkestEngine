@@ -3,6 +3,8 @@
 
 #include "Module.h"
 
+#include "SDL.h"
+
 struct SDL_Window;
 struct SDL_Surface;
 
@@ -24,6 +26,8 @@ public:
 
 	//Window's surface
 	SDL_Surface* screenSurface = nullptr;
+
+	SDL_GLContext glContext;
 
 private:
 	int width = SCREEN_WIDTH;

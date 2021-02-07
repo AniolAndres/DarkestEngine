@@ -6,6 +6,7 @@
 #include "Globals.h"
 #include "SDL.h"
 #include <assert.h>
+#include "GL/glew.h"
 
 ModuleWindow::ModuleWindow()
 {
@@ -29,9 +30,11 @@ bool ModuleWindow::Init()
 		int width = SCREEN_WIDTH * SCREEN_SIZE;
 		int height = SCREEN_HEIGHT * SCREEN_SIZE;
 
-		Uint32 flags = SDL_WINDOW_SHOWN;	
+		Uint32 flags = SDL_WINDOW_SHOWN;
+		flags |= SDL_WINDOW_OPENGL;
 
 		window = SDL_CreateWindow(TITLE, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, flags);
+		glContext = SDL_GL_CreateContext(window);
 
 		if (window == nullptr)
 		{
@@ -57,6 +60,7 @@ bool ModuleWindow::CleanUp()
 	if (window != nullptr)
 	{
 		SDL_DestroyWindow(window);
+		SDL_GL_DeleteContext(glContext);
 	}
 
 	SDL_Quit();
