@@ -1,6 +1,8 @@
 
 #include "Globals.h"
 #include "ModuleInput.h"
+#include "ModuleWindow.h"
+#include "Application.h"
 
 #include "SDL.h"
 
@@ -53,6 +55,10 @@ UpdateState ModuleInput::PreUpdate()
 		case SDL_WINDOWEVENT:
 			switch (event.window.event)
 			{
+			case SDL_WINDOWEVENT_RESIZED:
+			case SDL_WINDOWEVENT_SIZE_CHANGED:
+				App->window->Resize(event.window.data1, event.window.data2);
+				break;
 			case SDL_WINDOWEVENT_HIDDEN:
 			case SDL_WINDOWEVENT_MINIMIZED:
 			case SDL_WINDOWEVENT_FOCUS_LOST:
@@ -91,6 +97,7 @@ UpdateState ModuleInput::PreUpdate()
 
 bool ModuleInput::CleanUp()
 {
+	SDL_QuitSubSystem(SDL_INIT_EVENTS);
 	return true;
 }
 

@@ -7,6 +7,7 @@
 
 Application* App = nullptr;
 
+
 int main(int argc, char* argv[])
 {
 	int mainReturn = EXIT_FAILURE;

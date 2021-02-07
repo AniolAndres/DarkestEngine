@@ -22,7 +22,7 @@ enum class UpdateState
 #define SCREEN_WIDTH 160
 #define SCREEN_HEIGHT 176
 #define SCREEN_SIZE 3
-#define TITLE "DotGame"
+#define TITLE "DarkestEngine"
 
 
 #define ROWS_NUMBER 11
